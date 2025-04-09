@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+{% load static %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Pesquisa de Satisfação</h1>
+        <form method="post" action="{% url 'enviar_feedback' %}">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label>1. Como você avalia nosso atendimento?</label>
+                <div class="radio-options">
+                    <label class="radio-option"><input type="radio" name="atendimento" value="Excelente" required> Excelente</label>
+                    <label class="radio-option"><input type="radio" name="atendimento" value="Bom"> Bom</label>
+                    <label class="radio-option"><input type="radio" name="atendimento" value="Regular"> Regular</label>
+                    <label class="radio-option"><input type="radio" name="atendimento" value="Ruim"> Ruim</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>2. O que você achou do nosso mix de produtos (variedade e opções)?</label>
+                <div class="radio-options">
+                    <label class="radio-option"><input type="radio" name="mix_produtos" value="Muito completo" required> Muito completo</label>
+                    <label class="radio-option"><input type="radio" name="mix_produtos" value="Bom"> Bom</label>
+                    <label class="radio-option"><input type="radio" name="mix_produtos" value="Poderia ter mais opções"> Poderia ter mais opções</label>
+                    <label class="radio-option"><input type="radio" name="mix_produtos" value="Pouca variedade"> Pouca variedade</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>3. Você considera nosso atendimento ágil?</label>
+                <div class="radio-options">
+                    <label class="radio-option"><input type="radio" name="atendimento_agil" value="Sim, sempre rápido" required> Sim, sempre rápido</label>
+                    <label class="radio-option"><input type="radio" name="atendimento_agil" value="Na maioria das vezes"> Na maioria das vezes</label>
+                    <label class="radio-option"><input type="radio" name="atendimento_agil" value="Às vezes demora"> Às vezes demora</label>
+                    <label class="radio-option"><input type="radio" name="atendimento_agil" value="Demora bastante"> Demora bastante</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>4. O que você achou dos valores dos nossos produtos?</label>
+                <div class="radio-options">
+                    <label class="radio-option"><input type="radio" name="valores_produtos" value="Preço justo" required> Preço justo</label>
+                    <label class="radio-option"><input type="radio" name="valores_produtos" value="Um pouco alto"> Um pouco alto</label>
+                    <label class="radio-option"><input type="radio" name="valores_produtos" value="Muito caro"> Muito caro</label>
+                    <label class="radio-option"><input type="radio" name="valores_produtos" value="Excelente custo-benefício"> Excelente custo-benefício</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>5. O prazo de entrega foi satisfatório?</label>
+                <div class="radio-options">
+                    <label class="radio-option"><input type="radio" name="prazo_entrega" value="Chegou antes do esperado" required> Chegou antes do esperado</label>
+                    <label class="radio-option"><input type="radio" name="prazo_entrega" value="Chegou no prazo"> Chegou no prazo</label>
+                    <label class="radio-option"><input type="radio" name="prazo_entrega" value="Atrasou um pouco"> Atrasou um pouco</label>
+                    <label class="radio-option"><input type="radio" name="prazo_entrega" value="Atrasou muito"> Atrasou muito</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>6. Você teria alguma sugestão de melhoria para nossa loja ou atendimento?</label>
+                <textarea name="sugestao_melhoria" placeholder="Digite sua sugestão aqui..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Enviar Feedback</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p>Feito com <3 <a class="linkedin" href="https://www.linkedin.com/in/rubens-neto-566b15242/" target="_blank">Rubens Gonçalves - Linkedin</a></p>
+    </div>
+{% endblock %}

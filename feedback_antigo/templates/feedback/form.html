@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Rubens Couros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 100px;
+        }
+        .btn-submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback - Rubens Couros</h1>
+        <form action="/feedback/enviar/" method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label>1. Como você avalia o nosso atendimento?</label>
+                <label><input type="radio" name="atendimento" value="Excelente" required> Excelente</label>
+                <label><input type="radio" name="atendimento" value="Bom"> Bom</label>
+                <label><input type="radio" name="atendimento" value="Regular"> Regular</label>
+                <label><input type="radio" name="atendimento" value="Ruim"> Ruim</label>
+            </div>
+            
+            <div class="form-group">
+                <label>2. O que você achou do nosso mix de produtos (variedade e opções)?</label>
+                <label><input type="radio" name="mix_produtos" value="Muito completo" required> Muito completo</label>
+                <label><input type="radio" name="mix_produtos" value="Bom"> Bom</label>
+                <label><input type="radio" name="mix_produtos" value="Poderia ter mais opções"> Poderia ter mais opções</label>
+                <label><input type="radio" name="mix_produtos" value="Pouca variedade"> Pouca variedade</label>
+            </div>
+            
+            <div class="form-group">
+                <label>3. Você considera nosso atendimento ágil?</label>
+                <label><input type="radio" name="atendimento_agil" value="Sim, sempre rápido" required> Sim, sempre rápido</label>
+                <label><input type="radio" name="atendimento_agil" value="Na maioria das vezes"> Na maioria das vezes</label>
+                <label><input type="radio" name="atendimento_agil" value="Às vezes demora"> Às vezes demora</label>
+                <label><input type="radio" name="atendimento_agil" value="Demora bastante"> Demora bastante</label>
+            </div>
+            
+            <div class="form-group">
+                <label>4. O que você achou dos valores dos nossos produtos?</label>
+                <label><input type="radio" name="valores_produtos" value="Preço justo" required> Preço justo</label>
+                <label><input type="radio" name="valores_produtos" value="Um pouco alto"> Um pouco alto</label>
+                <label><input type="radio" name="valores_produtos" value="Muito caro"> Muito caro</label>
+                <label><input type="radio" name="valores_produtos" value="Excelente custo-benefício"> Excelente custo-benefício</label>
+            </div>
+            
+            <div class="form-group">
+                <label>5. O prazo de entrega foi satisfatório?</label>
+                <label><input type="radio" name="prazo_entrega" value="Chegou antes do esperado" required> Chegou antes do esperado</label>
+                <label><input type="radio" name="prazo_entrega" value="Chegou no prazo"> Chegou no prazo</label>
+                <label><input type="radio" name="prazo_entrega" value="Atrasou um pouco"> Atrasou um pouco</label>
+                <label><input type="radio" name="prazo_entrega" value="Atrasou muito"> Atrasou muito</label>
+            </div>
+            
+            <div class="form-group">
+                <label>6. Você teria alguma sugestão de melhoria para nossa loja ou atendimento?</label>
+                <textarea name="sugestao_melhoria" placeholder="Digite sua sugestão aqui..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Enviar Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
