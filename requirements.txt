@@ -1,0 +1,18 @@
+# Django framework
+Django>=5.2,<6.0
+
+# For deployment
+gunicorn>=21.2.0
+
+# Database adapters (uncomment if needed)
+# psycopg2-binary>=2.9.9  # For PostgreSQL
+# mysqlclient>=2.2.0      # For MySQL
+
+# For environment variables
+python-dotenv>=1.0.0
+
+# For static files in production
+whitenoise>=6.5.0
+
+# For security
+django-cors-headers>=4.3.0
