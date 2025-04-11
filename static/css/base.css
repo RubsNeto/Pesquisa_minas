@@ -1,20 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 15px;
     padding-bottom: 20px;
+    background-color: #0a2647;
+    color: #fff;
 }
+
 .logo-container {
     text-align: center;
+    background-color: #b1e0ef;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
+
+.logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 .logo {
     max-width: 200px;
     height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
+
 .content-container {
-    padding: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 @media (max-width: 576px) {
     .logo {
         max-width: 150px;
+    }
+    
+    .logo-container {
+        padding: 10px;
+    }
+    
+    .content-container {
+        padding: 10px;
     }
 }

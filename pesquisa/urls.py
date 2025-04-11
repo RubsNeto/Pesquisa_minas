@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.feedback_form, name='feedback_form'),
     path('enviar-feedback/', views.enviar_feedback, name='enviar_feedback'),
     path('obrigado/', views.thank_you, name='thank_you'),
+    path('respostas/', views.RespostasPesquisaView.as_view(), name='respostas'),
 ]
