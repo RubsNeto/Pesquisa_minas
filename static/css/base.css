@@ -2,13 +2,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 15px;
     padding-bottom: 20px;
-    background-color: #0a2647;
+    background-color: #0a4720; /* Changed from #0a2647 to dark green */
     color: #fff;
 }
 
 .logo-container {
     text-align: center;
-    background-color: #b1e0ef;
+    background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
     margin-bottom: 20px;

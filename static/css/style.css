@@ -1,5 +1,5 @@
 html, body {
-    background-color: #0a2647;
+    background-color: #00290f; /* Changed from #0a2647 to dark green */
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
@@ -47,7 +47,7 @@ h1 {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 15px;
-    color: #4cc9f0;
+    color: #4cf09f; /* Changed from #4cc9f0 to green */
     border-bottom: 1px solid rgba(255,255,255,0.2);
     padding-bottom: 10px;
 }
@@ -76,7 +76,7 @@ h1 {
 
 .radio-option input[type="radio"] {
     margin-right: 8px;
-    accent-color: #4cc9f0;
+    accent-color: #4cf09f; /* Changed from #4cc9f0 to green */
 }
 
 input[type="text"], textarea {
@@ -93,8 +93,8 @@ input[type="text"], textarea {
 
 input[type="text"]:focus, textarea:focus {
     outline: none;
-    border-color: #4cc9f0;
-    box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
+    border-color: #4cf09f; /* Changed from #4cc9f0 to green */
+    box-shadow: 0 0 0 2px rgba(76, 240, 159, 0.3); /* Changed rgba color to green */
 }
 
 textarea {
@@ -106,7 +106,7 @@ textarea {
     display: block;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #4cc9f0 0%, #3a86ff 100%);
+    background: linear-gradient(135deg, #4cf09f 0%, #3aff86 100%); /* Changed gradient to green */
     color: white;
     border: none;
     border-radius: 8px;
@@ -117,12 +117,12 @@ textarea {
     margin-top: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(76, 201, 240, 0.4);
+    box-shadow: 0 4px 15px rgba(76, 240, 159, 0.4); /* Changed rgba color to green */
 }
 
 .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(76, 201, 240, 0.6);
+    box-shadow: 0 6px 20px rgba(76, 240, 159, 0.6); /* Changed rgba color to green */
 }
 
 .btn-submit:active {
